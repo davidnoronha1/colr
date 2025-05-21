@@ -1,0 +1,4 @@
+*:selected, selection {
+	color: white;
+	background-color: blue;
+}

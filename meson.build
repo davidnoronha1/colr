@@ -1,5 +1,5 @@
 project('colr', 'c',
-  default_options : [ 'b_sanitize=address' ])
+  default_options : [ ])
 
 # Add Math Library
 cc = meson.get_compiler('c')

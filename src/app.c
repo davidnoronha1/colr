@@ -31,6 +31,10 @@ static void init_styling() {
 	gtk_css_provider_load_from_resource(provider, "/undefinedDarkness/colr/app.css"); // Loaded from resources file.
 	GdkScreen *display = gdk_display_get_default_screen(gdk_display_get_default());
 	gtk_style_context_add_provider_for_screen(display, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+	
+	GtkCssProvider *override_provider = gtk_css_provider_new();
+	gtk_css_provider_load_from_resource(override_provider, "/undefinedDarkness/colr/override.css"); // Loaded from resources file.
+	gtk_style_context_add_provider_for_screen(display, GTK_STYLE_PROVIDER(override_provider), GTK_STYLE_PROVIDER_PRIORITY_USER);
 }
 
 /* }}} */
